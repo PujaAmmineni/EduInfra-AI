@@ -1,0 +1,194 @@
+/* ————— GLOBAL RESET ————— */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* never show a horizontal scroll */
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Overall container for the login page */
+/* Container for the back button */
+
+
+.login-container {
+    display: flex;
+    height: 100vh;  /* Full viewport height */
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Left Panel (Orange) */
+.login-left-panel {
+    flex: 1;                      
+    background-color: #ff991c;    /* Orange color */
+    color: #fff;                  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Logos Container */
+.login-logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;          /* space between logos */
+    margin-bottom: 30px;
+}
+
+/* Ensure logos have a consistent size */
+.login-logo img {
+    max-width: 150px;   /* Don’t exceed 150px width */
+    max-height: 70px;   /* Don’t exceed 50px height */
+    height: auto;
+    width: auto;
+}
+
+/* Main heading style in the left panel */
+.login-left-panel h1 {
+    font-size: 2rem;        /* Adjust as needed */
+    font-weight: 700;       /* Make it bold */
+    margin-bottom: 1rem;
+    line-height: 1.3;       /* Slightly tighter spacing */
+}
+
+/* Right Panel (Form) */
+.login-right-panel {
+    flex: 1;                         
+    background-color: #f7f9fc;  /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Wrapper around the form */
+.login-form-wrapper {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* Subheading in the right panel */
+.login-right-panel h2 {
+    margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.login-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form-wrapper form label {
+    font-weight: bold;
+}
+
+.login-form-wrapper form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.login-form-wrapper button[type="submit"] {
+    background-color: #ff991c;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-form-wrapper button[type="submit"]:hover {
+    background-color: #e08510;
+}
+
+/* Error Message */
+.login-error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Register Link */
+.login-register-link {
+    margin-top: 10px;
+}
+
+/* ================================================
+   MOBILE LAYOUT OVERRIDES
+   ================================================ */
+   @media (max-width: 768px) {
+    /* 1) Stack panels vertically */
+    .login-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    /* 2) Full-width panels with tighter padding */
+    .login-left-panel,
+    .login-right-panel {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    /* 3) Wrap & shrink logos */
+    .login-logos-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .login-logo img {
+      max-width: 100px;
+      max-height: 50px;
+    }
+  
+    /* 4) Scale down heading & tagline */
+    .login-left-panel h1 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .login-left-panel p {
+      font-size: 0.9rem;
+    }
+  
+    /* 5) Center the form & bump its width */
+    .login-form-wrapper {
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+    .login-form-wrapper form {
+      gap: 12px;
+    }
+    .login-form-wrapper label {
+      font-size: 0.9rem;
+    }
+    .login-form-wrapper input {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .login-form-wrapper button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }

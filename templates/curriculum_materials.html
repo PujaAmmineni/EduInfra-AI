@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta property="og:image" content="{{ url_for('static', filename='images/Curriculum-icon.png', _external=True) }}">  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_materials">
+  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_materials">
+  <meta property="og:type" content="website">
+  <title>GenAI Cyber-Infrastructure for Construction Education</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='materials.css') }}" />
+</head>
+<body>
+
+<!-- Header / Navbar -->
+<header class="material_header">
+  <div class="material_navbar-container">
+
+    <!-- Left: NSF Logo + Award + Partner Logos -->
+    <div class="material_logo-section">
+      <!-- NSF Logo -->
+      <img
+        src="{{ url_for('static', filename='images/nsf_logo.png') }}"
+        alt="NSF Logo"
+        class="material_nsf-logo"
+      />
+      <span class="material_award-text">
+        NSF<br>Award 2417804
+      </span>
+      <!-- Michigan Tech Logo -->
+      <img
+        src="{{ url_for('static', filename='images/mtu_color_logo.png') }}"
+        alt="Michigan Tech Logo"
+        class="material_partner-logo"
+      />
+
+      <!-- Western Michigan University Logo -->
+      <img
+        src="{{ url_for('static', filename='images/WMU_primary-digital.png') }}"
+        alt="Western Michigan University Logo"
+        class="material_partner-logo"
+      />
+    </div>
+
+    <!-- Right: Hamburger + Nav (no change) -->
+    <button class="material_menu-toggle" aria-label="Toggle menu">
+      <span class="material_hamburger-bar"></span>
+      <span class="material_hamburger-bar"></span>
+      <span class="material_hamburger-bar"></span>
+    </button>
+      <!-- Nav -->
+      <nav class="material_nav">
+        <ul class="material_nav-list">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('teams') }}">Team</a></li>
+          <li><a class="active" href="#">Curriculum Materials</a></li>
+          <li><a href="{{ url_for('ai_platform') }}">CyberTraining Platfrom</a></li>
+        </ul>
+      </nav>
+
+  </div>
+</header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="material_main-content">
+      <!-- Existing Paragraph Section (Intro about BIM Tutorials) -->
+      <section class="material_intro-section">
+          <h1 class="material_intro-title">
+              Undergraduate-level BIM Curriculum Materials by <br>
+              <span class="material_highlight">Knowledge Space Theory</span>
+          </h1>
+          <p class="material_intro-paragraph">
+            Relying on the project team’s preliminary studies and literature reviews, our team has developed a four-week BIM-based digital twinning curriculum materials. The knowledge space theory from cognitive science has been adopted to organize these materials, reflecting a profession from simpler to more complex concepts, to help students learn in an efficient way. These curriculum materials have been integrated to the CyberTraining Platform.
+          </p>
+      </section>
+
+      <section class="download-section">
+        <a href="{{ url_for('download_materials') }}" class="download-button">
+          Download All Materials
+        </a>
+      </section>
+
+      <section class="bim-intro-section">
+        <div class="bim-intro-container">
+
+          <!-- Left Column: Main Image -->
+          <div class="bim-intro-image">
+            <img 
+              src="{{ url_for('static', filename='images/curriculum/tutorial-bim.png') }}" 
+              alt="Tutorial BIM" 
+            />
+          </div>
+          <!-- Right   Column: Week 1 & Topics -->
+          <div class="bim-intro-text">
+            <span class="week-label">Week 1 </span>
+            <div class="bim-intro-header">
+              <!-- Curriculum Icon -->
+              <img 
+                src="{{ url_for('static', filename='images/curriculum/Curriculum-icon.png') }}" 
+                alt="Curriculum Icon" 
+                class="bim-icon"
+              />
+      
+              <h2 class="bim-intro-title"> Introduction to BIM</h2>
+            </div>
+            <ul class="bim-intro-topics">
+              <li>BIM Background</li>
+              <li>BIM Basic Concepts</li>
+              <li>BIM Development History</li>
+              <li>BIM Applications</li>
+              <li>Challenges and Future Directions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="bim-intro-section">
+        <div class="bim-intro-container">
+          <!-- Left Column: Week 1 & Topics -->
+          <div class="bim-intro-text">
+            <span class="week-label">Week 2</span>
+            <div class="bim-intro-header">
+              <!-- Curriculum Icon -->
+              <img 
+                src="{{ url_for('static', filename='images/curriculum/BIM.png') }}" 
+                alt="BIM" 
+                class="bim-icon"
+              />
+      
+              <h2 class="bim-intro-title"> Architectural Modeling in Revit</h2>
+            </div>
+      
+            <ul class="bim-intro-topics">
+              <li>Creating floor plans in Revit</li>
+              <li>Adding and editing roofs and ceilings</li>
+              <li>Modifying architectural components</li>
+              <li>Introductory modeling practice exercises</li>
+            </ul>
+          </div>
+                <!-- Right Column: Main Image -->
+                <div class="bim-intro-image">
+                  <img 
+                    src="{{ url_for('static', filename='images/curriculum/BIM-Technical-Proficiency.png') }}" 
+                    alt="BIM-Technical-Proficiency" 
+                  />
+                </div>
+        </div>
+      </section>
+      <section class="bim-intro-section">
+        <div class="bim-intro-container">
+
+          <!-- Left Column: Main Image -->
+          <div class="bim-intro-image">
+            <img 
+              src="{{ url_for('static', filename='images/curriculum/BIM-Computer-Vision.png') }}" 
+              alt="BIM-Computer-Vision.png" 
+            />
+          </div>
+          <!-- Right   Column: Week 1 & Topics -->
+          <div class="bim-intro-text">
+            <span class="week-label">Week 3</span>
+            <div class="bim-intro-header">
+              <!-- Curriculum Icon -->
+              <img 
+                src="{{ url_for('static', filename='images/curriculum/curriculum_building.png') }}" 
+                alt="curriculum_building" 
+                class="bim-icon"
+              />
+      
+              <h2 class="bim-intro-title">BIM & Computer Vision</h2>
+            </div>
+            <ul class="bim-intro-topics">
+              <li>CV Use Case in BIM</li>
+              <li>Fundamentals of CV Data Collection</li>
+              <li>Hands-On Skills for BIM-CV Integration</li>
+              <li>Challenges and Future Directions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="bim-intro-section">
+        <div class="bim-intro-container">
+          <!-- Left Column: Week 1 & Topics -->
+          <div class="bim-intro-text">
+            <span class="week-label">Week 4</span>
+            <div class="bim-intro-header">
+              <!-- Curriculum Icon -->
+              <img 
+                src="{{ url_for('static', filename='images/curriculum/ar-vr.png') }}" 
+                alt="ar-vr" 
+                class="bim-icon"
+              />
+      
+              <h2 class="bim-intro-title">BIM Technical Proficiency</h2>
+            </div>
+      
+            <ul class="bim-intro-topics">
+              <li>BIM AR/VR in Digital Construction</li>
+              <li>Fundamentals of AR/VR</li>
+              <li>Hands-On Skills for BIM-AR/VR Integration</li>
+              <li>Challenges and Future Directions</li>
+            </ul>
+          </div>
+                <!-- Right Column: Main Image -->
+                <div class="bim-intro-image">
+                  <img 
+                    src="{{ url_for('static', filename='images/curriculum/BIM-Technical-Proficiency-2.png') }}" 
+                    alt="BIM-Technical-Proficiency-2" 
+                  />
+                </div>
+        </div>
+      </section>
+
+  </main>
+
+  <footer class="material_footer">
+    <div class="material_footer-container">
+      <!-- Footer Item 1: Contact Info (icon + text together) -->
+      <div class="footer-item footer-contact">
+        <img src="{{ url_for('static', filename='images/connect.png') }}" 
+             alt="Connect Icon" 
+             class="material_connect-icon" />
+             <div class="material_contact-line">
+              <span class="material_contact-title">Contact Us:</span>
+              <span class="material_contact-email">boxiao@gmail.com</span>
+            </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS -->
+  <script>
+  document.querySelector(".material_menu-toggle").addEventListener("click", function() {
+    document.querySelector(".material_nav-list").classList.toggle("material_show-nav");
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+#Ignore environment variable files
+.env
+.env.local
+.env.*.local
+evals
+rough-main.py
+app.zip

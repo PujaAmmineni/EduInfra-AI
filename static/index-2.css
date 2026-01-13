@@ -1,0 +1,252 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: #ff991c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    border-right: 2px solid white;
+    padding: 1%;
+    font-weight: bold;
+}
+
+.title {
+    margin-left: 1%;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main Layout - Chat and PDF Viewer */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 200px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Wrapping container below the header */
+.main-wrapper {
+    position: relative;  /* allows absolute positioning inside */
+    width: 100%;
+    /* min-height: calc(100vh - 100px); optional if you want full-page content minus header height */
+  }
+  
+/* -----------------------------
+   Sub-header for Back Button
+------------------------------ */
+.sub-header {
+    width: 100%; 
+    background: transparent;  /* or match your page background */
+    padding-bottom: 10px;          /* vertical spacing */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* space between header and sub-header */
+  }
+  
+  .sub-header-inner {
+    width: 100%;        /* use full page width */
+    margin: 0;          /* remove auto-centering */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Back Button Styling */
+  .back-button-link {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .back-button-link:hover {
+    background-color: #e0e0e0;
+  }
+
+/* Chat Section (Left Side) */
+.chat-box {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 20px;
+    transition: width 0.3s ease-in-out;
+    overflow-y: auto;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps input box centered */
+}
+
+/* PDF Section (Right Side) */
+.pdf-box {
+    background-color: white;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-pdf {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.expanded {
+    width: 60% !important;
+}
+
+.chat-box.pdf-open {
+    width: 59%;
+    align-items: flex-start;
+}
+
+.chat-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* height: calc(100vh - 180px); */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Message Styles */
+.message {
+    padding: 6px 10px;
+    border-radius: 15px;
+    max-width: 40%;
+}
+
+.message-text {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    align-items: center;
+}
+
+.user-message {
+    align-self: flex-end;
+    align-items: center;
+}
+
+/* Input Section */
+.input-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
+    background: #f7f9fc;
+    transition: all 0.3s ease-in-out;
+}
+
+.pdf-open .input-container {
+    justify-content: flex-start;
+}
+
+.input-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff991c;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #e08510;
+}
+
+/* PDF Viewer */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@keyframes typingDots {
+    0% { content: "Thinking"; }
+    33% { content: "Thinking."; }
+    66% { content: "Thinking.."; }
+    100% { content: "Thinking..."; }
+}
+
+.typing-indicator::after {
+    content: "Thinking";
+    animation: typingDots 1.5s infinite;
+}
+
+/* Hide PDF by default */
+.hidden {
+    display: none;
+}
+
+
+
+

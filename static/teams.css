@@ -1,0 +1,432 @@
+/* =========================================
+   BASIC RESETS
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* =========================================
+     HEADER / NAVBAR
+     ========================================= */
+  .teams_header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teams_navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+/* Logo section now holds 4 items: NSF, award text, MTU, WMU */
+.teams_logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;              /* space between logos/text */
+}
+
+/* NSF logo stays big */
+.teams_nsf-logo {
+  height: 70px;
+  width: auto;
+}
+
+/* award text styling (unchanged) */
+.teams_award-text {
+  font-size: 1rem;
+}
+  
+  /* =========================================
+     HAMBURGER MENU (MOBILE)
+     ========================================= */
+  .teams_menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .teams_hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+  
+  /* =========================================
+     NAVIGATION MENU
+     ========================================= */
+  .teams_nav {
+    margin-right: 2rem;
+  }
+  
+  .teams_nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: max-height 0.3s ease;
+  }
+  
+  .teams_nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .teams_nav-list li a:hover {
+    color: #f57c00;
+  }
+  
+  .teams_nav-list li a.active {
+    color: #f57c00;
+    font-weight: bold;
+  }
+  
+  
+  /* =========================================
+     MAIN CONTENT (Team Introduction)
+     ========================================= */
+  .teams_main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  /* Main Title */
+  .teams_title {
+    font-size: 2.5rem;               /* Make it bigger than before */
+    color: #333;                  /* Dark gray or black */
+    margin-bottom: 1rem;
+    line-height: 1.2;             /* Slightly tighter line spacing */
+  }
+
+  /* Span: “OUR TEAM” with a different color or style */
+  .teams_title span {
+    display: block;               /* ensures it’s on its own line */
+    margin-top: 0.5rem;           /* small space above “OUR TEAM” */
+    color: #f57c00;               /* bright orange highlight */
+    font-size: 3rem;              /* same size as “INTRODUCTION OF” */
+    font-weight: 800;            /* even bolder if you like */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* match shadow */
+  }
+
+  .teams_intro-paragraph {
+    max-width: 100%;       /* limit paragraph width for readability */
+    margin: 1rem auto;      /* center horizontally, with 1rem margin on top/bottom */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;            /* or adjust to your desired color */
+    text-align: justify;       /* or center, depending on preference */
+  }
+
+  .highlight-orange {
+    color: #f57c00;      /* Orange color */
+    font-size: 1.5rem;   /* Increase font size as needed */
+    font-weight: bold;   /* Bold text */
+  }
+  
+  /* =========================================
+     TEAM SECTIONS
+     ========================================= */
+  .teams_section {
+    margin-top: 3rem;
+  }
+  
+  .teams_section-title {
+    color: #f57c00;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  
+  /* Cards Container: CSS Grid for exactly 3 cards per row */
+  .teams_cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-items: center;
+  }
+  
+  /* Individual Team Card */
+  .teams_card {
+    /* background-color: #fff; */
+    /* border-radius: 4px; */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .teams_card:hover {
+    /* transform: translateY(-3px); */
+  }
+  
+  /* Card Image (Square) */
+  .teams_card-image {
+    display: block;                /* ensures we can center it with margin auto */
+    width: 250px;             /* reduce the image size */
+    height: 300px;               /* fixed height for square */
+    margin: 0 auto 0.75rem;       /* center horizontally + space below */
+    object-fit: cover;
+    
+    /* Grey background and border to create a “frame” behind the image */
+    background-color: #f0f0f0;     /* light grey */
+    border: 1px solid #ccc;       /* thin grey border */
+    padding: 1rem;              /* space between the image and the border */
+    border-radius: 4px;           /* small rounding on the corners */
+  }
+  
+  /* Card Text */
+  .teams_card-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .teams_card-name a {
+    color: #000;           /* Makes the link black */
+    text-decoration: none; /* Removes the underline */
+  }
+
+  .teams_card-name a:visited {
+    color: #000;
+  }
+  
+  .teams_card-role {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.3;
+  }
+  
+
+  
+  
+/* FOOTER
+   ========================================= */
+   .teams_footer {
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .teams_footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* center the single contact block now that it's the only item */
+    justify-content: center;
+  }
+  
+  /* CONTACT BLOCK */
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .teams_connect-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .teams_contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .teams_contact-title {
+    font-size: 1rem;
+  }
+  
+  .teams_contact-email {
+    color: #f57c00;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+
+
+/* Partner logos—smaller than NSF logo */
+.teams_partner-logo {
+  height: 40px;      
+  width: auto;
+}
+
+.teams_contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.teams_advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.teams_advisory-card {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.teams_advisory-card p {
+  margin: 0.2rem 0;
+}
+
+.teams_advisory-card strong {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE OVERRIDES
+   ========================================= */
+   @media (max-width: 768px) {
+    /* — HEADER — */
+    .teams_header {
+      padding: 0.8rem 0.8rem;        /* was 0.5rem, now 1rem top/bottom */
+    }
+    .teams_navbar-container {
+      flex-wrap: nowrap;
+    }
+  
+    .teams_logo-section {
+      flex-wrap: wrap;           /* allow wrapping */
+      gap: 0.5rem;
+    }
+    .teams_nsf-logo {
+      height: 80px;              /* smaller NSF logo */
+    }
+    /* keep award text legible */
+    .teams_award-text {
+      font-size: 0.9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .teams_partner-logo {
+      display: none;             /* hide MTU/WMU on mobile */
+    }
+  
+    /* — HAMBURGER NAV — */
+    .teams_menu-toggle {
+      display: flex;
+      margin-left: auto;
+    }
+    .teams_nav-list {
+      display: block;
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      width: 180px;
+      max-height: 0;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      transition: max-height 0.3s ease;
+      z-index: 1000;
+    }
+    .teams_nav-list.teams_show-nav {
+      max-height: 400px;
+    }
+    .teams_nav-list li {
+      border-bottom: 1px solid #eee;
+    }
+    .teams_nav-list li:last-child {
+      border-bottom: none;
+    }
+    .teams_nav-list li a {
+      display: block;
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+    }
+  
+    /* — MAIN CONTENT — */
+    .teams_main-content {
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+  
+    /* — TITLE & INTRO — */
+    .teams_title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .teams_title span {
+      font-size: 2rem;
+    }
+    .teams_intro-paragraph {
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+  
+    /* — TEAM GRID — */
+    .teams_cards-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .teams_card {
+      padding: 0.75rem;
+    }
+    .teams_card-image {
+      width: 150px;
+      height: 180px;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+    }
+    .teams_card-name {
+      font-size: 1rem;
+    }
+    .teams_card-role {
+      font-size: 0.85rem;
+    }
+  
+    /* — FOOTER — */
+    .teams_footer-container {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+    .footer-contact {
+      justify-content: center;
+    }
+    .teams_connect-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .teams_contact-title,
+    .teams_contact-email {
+      font-size: 0.95rem;
+    }
+  }

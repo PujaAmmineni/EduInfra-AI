@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <meta property="og:image" content="{{ url_for('static', filename='images/Curriculum-icon.png', _external=True) }}">  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_materials">
+  <meta property="og:image" content="{{ url_for('static', filename='images/home.png', _external=True) }}">  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_materials">
+  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com">
+  <meta property="og:type" content="website">
+  <title>GenAI Cyber-Infrastructure for Construction Education</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}" />
+</head>
+<body>
+
+<!-- Header / Navbar -->
+<header class="homepage_header">
+  <div class="homepage_navbar-container">
+
+    <!-- Left: NSF Logo + Award + Partner Logos -->
+    <div class="homepage_logo-section">
+      <!-- NSF Logo -->
+      <img
+        src="{{ url_for('static', filename='images/nsf_logo.png') }}"
+        alt="NSF Logo"
+        class="homepage_nsf-logo"
+      />
+      <span class="homepage_award-text">
+        NSF<br>Award 2417804
+      </span>
+      <!-- Michigan Tech Logo -->
+      <img
+        src="{{ url_for('static', filename='images/mtu_color_logo.png') }}"
+        alt="Michigan Tech Logo"
+        class="homepage_partner-logo"
+      />
+
+      <!-- Western Michigan University Logo -->
+      <img
+        src="{{ url_for('static', filename='images/WMU_primary-digital.png') }}"
+        alt="Western Michigan University Logo"
+        class="homepage_partner-logo"
+      />
+    </div>
+
+    <!-- Right: Hamburger + Nav (no change) -->
+    <button class="homepage_menu-toggle" aria-label="Toggle menu">
+      <span class="homepage_hamburger-bar"></span>
+      <span class="homepage_hamburger-bar"></span>
+      <span class="homepage_hamburger-bar"></span>
+    </button>
+      <!-- Nav -->
+      <nav class="homepage_nav">
+        <ul class="homepage_nav-list">
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="{{ url_for('teams') }}">Team</a></li>
+          <li><a href="{{ url_for('curriculum_materials') }}">Curriculum Materials</a></li>
+          <li><a href="{{ url_for('ai_platform') }}">CyberTraining Platfrom</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="homepage_main-section">
+    <!-- Left Text Content -->
+    <div class="homepage_text-content">
+      <h1 class="homepage_main-heading">
+        GenAI CyberTraining Platform for 
+        <span class="homepage_highlight">Construction Education</span>
+      </h1>
+
+      <!-- Project Information Box -->
+      <div class="homepage_project-info-box">
+        <div class="homepage_project-info-header">Project Information</div>
+        <div class="homepage_project-info-body">
+          Supported by National Science Foundation (NSF), this project aims to develop an  interactive CyberTraining platform powered by cognitive and generative AI to advance construction education with a focus onBuilding Information Modeling (BIM) Cyber Infrastructure (CI). The proposed CyberTraining platform provides an interactive, customized, and course-oriented learning environment by knowledge space theories, scaffold learning, and retrieval-augmented generation (RAG). A four-week BIM learning module has been developed and integrated into the platform. 
+        </div>
+      
+        <!-- New container to center the button -->
+        <div class="homepage_project-info-action">
+          <a href="{{ url_for('login') }}" class="homepage_cta-button">
+            Try Our Platform
+            <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Arrow" class="homepage_arrow-icon" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Image -->
+    <div class="homepage_image-container">
+      <img
+        src="{{ url_for('static', filename='images/building.svg')}}"
+        alt="Construction Building"
+        class="homepage_building-image"
+      />
+    </div>
+    <section class="homepage_info-row">
+      <!-- Left Column: Intellectual Merit -->
+      <div class="homepage_info-col">
+        <h2 class="homepage_info-heading">Intellectual Merit</h2>
+        <div class="homepage_info_text">
+          <p>This project reimagines BIM CI training by combining cognitive science with generative technology to deliver scalable, personalized, and hands-on learning in construction education.</p>
+      </div>
+        <ul class="homepage_bullet-list">
+          <li><strong>Personalized Training</strong>: Filling the gap of CI CyberTraining in construction</li>
+          <li><strong>Flexible Content</strong>: Generative design for diversify BIM Training materials</li>
+          <li><strong>Scalable Platform</strong>: Easily to be extended to other STEM education fields</li>
+        </ul>
+      </div>
+    
+      <!-- Right Column: Broader Impacts -->
+      <div class="homepage_info-col">
+        <h2 class="homepage_info-heading">Broader Impacts</h2>
+        <div class="homepage_info_text">
+          <p>This project enhances BIM CI education and strengthens the skilled workforce pipeline through personalized, accessible training across all levels.</p>
+      </div>
+  
+        <ul class="homepage_bullet-list">
+          <li><strong>Construction Education</strong>: Advance students' skill sets in BIM CI</li>
+          <li><strong>Widely CI Training</strong>: Lead the genAI transformation of the educational ecosystem</li>
+          <li><strong>Society</strong>: Mitigate the nation's shortage of skilled construction workers</li>
+        </ul>
+      </div>
+    </section>
+      
+    <!-- Task Overview Section -->
+    <section class="homepage_task-overview">
+        <h2 class="homepage_task-heading">Task Overview</h2>
+        <img
+        src="{{ url_for('static', filename='images/task_overview.png')}}"
+        alt="Task Overview"
+        class="homepage_task-image"
+        />
+    </section>
+  </main>
+
+    
+    <footer class="homepage_footer">
+      <div class="homepage_footer-container">
+        <!-- Footer Item 1: Contact Info (icon + text together) -->
+        <div class="footer-item footer-contact">
+          <img src="{{ url_for('static', filename='images/connect.png') }}" 
+               alt="Connect Icon" 
+               class="homepage_connect-icon" />
+               <div class="homepage_contact-line">
+                <span class="homepage_contact-title">Contact Us:</span>
+                <span class="homepage_contact-email">boxiao@gmail.com</span>
+              </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+<!-- Minimal JS -->
+<script>
+  document.querySelector(".homepage_menu-toggle").addEventListener("click", function() {
+    document.querySelector(".homepage_nav-list").classList.toggle("homepage_show-nav");
+  });
+  </script>
+</html>

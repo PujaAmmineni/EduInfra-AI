@@ -1,0 +1,503 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: #ff991c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.logo-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    border-right: 2px solid white;
+    padding: 1%;
+    font-weight: bold;
+}
+
+.title {
+    margin-left: 1%;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    width: 100%;
+    height: calc(100vh - 200px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Wrapping container below the header */
+.main-wrapper {
+    position: relative;  /* allows absolute positioning inside */
+    width: 100%;
+    /* min-height: calc(100vh - 100px); optional if you want full-page content minus header height */
+  }
+  
+/* -----------------------------
+   Sub-header for Back Button
+------------------------------ */
+.sub-header {
+    width: 100%; 
+    background: transparent;  /* or match your page background */
+    padding-bottom: 10px;          /* vertical spacing */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* space between header and sub-header */
+  }
+  
+  .sub-header-inner {
+    width: 100%;        /* use full page width */
+    margin: 0;          /* remove auto-centering */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Back Button Styling */
+  .back-button-link {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .back-button-link:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* ================================
+   SIDEBAR
+================================ */
+.sidebar {
+    width: 220px; /* fixed width for the sidebar */
+    background-color: #f5f5f5;
+    border-right: 2px solid #ff991c;
+    /* optional: min-height to match chat box if you want */
+    /* min-height: 600px; or auto if you want it to grow */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 20px; /* space between sidebar and chat box */
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+  }
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+  }
+  .nav-links li a:hover {
+    background-color: #ffffff;
+  }
+  
+/* Reset list look */
+.nav-links {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links li {
+    list-style: none;
+    position: relative;    /* so the stripe can position itself */
+  }
+  
+  /* Base link styling */
+  .nav-links li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  /* Active state: light orange background */
+  .nav-links li.active a {
+    background-color: rgba(255, 165, 0, 0.1);
+  }
+  
+  /* Active stripe on the left */
+  .nav-links li.active a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 4px;
+    background-color: #FFA500;
+    border-radius: 2px;
+  }
+
+  /* optional */
+.stop-mode {
+  background: #e74c3c; /* red */
+  color: #fff;
+}
+/* Chat Section (Left Side) */
+.chat-box {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 20px;
+    transition: width 0.3s ease-in-out;
+    overflow-y: auto;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps input box centered */
+}
+
+/* PDF Section (Right Side) */
+.pdf-box {
+    background-color: white;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-pdf {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.expanded {
+    width: 60% !important;
+}
+
+.chat-box.pdf-open {
+    width: 59%;
+    align-items: flex-start;
+}
+
+.chat-container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* height: calc(100vh - 180px); */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Message Styles */
+.message {
+    padding: 6px 10px;
+    border-radius: 15px;
+    max-width: 40%;
+}
+
+.message-text {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    align-items: center;
+}
+
+.user-message {
+    align-self: flex-end;
+    align-items: center;
+}
+
+/* Input Section */
+.input-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    position: sticky;
+    bottom: 0;
+    background: #f7f9fc;
+    transition: all 0.3s ease-in-out;
+}
+
+.pdf-open .input-container {
+    justify-content: flex-start;
+}
+
+.input-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff991c;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #e08510;
+}
+
+/* PDF Viewer */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Follow-up suggestions */
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.suggestion-chip {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.92rem;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.suggestion-chip:hover {
+  background: #f7f7f7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+@keyframes typingDots {
+    0% { content: "Thinking"; }
+    33% { content: "Thinking."; }
+    66% { content: "Thinking.."; }
+    100% { content: "Thinking..."; }
+}
+
+.typing-indicator::after {
+    content: "Thinking";
+    animation: typingDots 1.5s infinite;
+}
+
+/* Hide PDF by default */
+.hidden {
+    display: none;
+}
+
+/* —————— MOBILE OVERRIDES (≤768px) —————— */
+@media (max-width: 768px) {
+
+  /* ——————— GLOBAL RESET ——————— */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+  /* 0) absolutely no horizontal scroll ever */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* 1) BODY & HEADER: full-width, tight */
+  body {
+    padding: 0;
+  }
+  header {
+    width: 100vw;
+    margin: 0;
+    padding: 0.5rem 0;
+    border-radius: 0;
+  }
+  .logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+  .logo-container .logo {
+    border: none;
+    padding: 0;
+  }
+  .logo-container .logo img {
+    max-height: 32px;
+    width: auto;
+  }
+  .logo-container .title {
+    flex: 1 1 100%;
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  /* 2) completely hide the back-button row */
+  .sub-header {
+    display: none !important;
+  }
+
+  /* 3) stack everything & drop the PDF pane by default */
+  .main-wrapper .container {
+    flex-direction: column;
+    padding: 0 0.5rem;
+    height: auto !important;
+    overflow-x: hidden;
+  }
+
+  /* 4) chat takes 100% of viewport */
+  .chat-box {
+    width: 100vw !important;
+    margin: 0 auto 1rem !important;
+    padding: 1rem 0.5rem 4rem !important; /* bottom padding for input */
+    border-radius: 0;
+    overflow-x: hidden;
+  }
+  .chat-container {
+    padding: 0 0.5rem 4rem !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* 5) pin the input bar right at the bottom */
+  .input-container {
+    position: fixed !important;
+    left: 0; right: 0; bottom: 0;
+    display: flex !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem !important;
+    background: #f7f9fc !important;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1) !important;
+    z-index: 1000;
+  }
+  .input-container input[type="text"] {
+    flex: 1 1 auto !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
+    font-size: 1rem !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    max-width: calc(100% - 56px) !important;
+  }
+  .send-button {
+    flex: 0 0 48px !important;
+    width: 48px !important; height: 48px !important;
+    padding: 0 !important;
+    font-size: 1.25rem !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center; justify-content: center;
+    background-color: #ff991c !important;
+    color: #fff !important;
+    border: none !important;
+  }
+  .send-button:hover {
+    background-color: #e08510 !important;
+  }
+
+  /* 6) chat-bubble width → 90% */
+  .bot-message,
+  .user-message {
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+
+  /* 7) PDF BOX = full-screen overlay when JS adds “expanded” */
+  .pdf-box {
+    display: none;               /* hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 2000;
+    flex-direction: column;
+  }
+  /* **YOUR JS** does pdfBox.classList.add('expanded') → show here */
+  .pdf-box.expanded {
+    display: flex !important;
+  }
+  /* close button */
+  .pdf-box .close-pdf {
+    position: absolute;
+    top: 0.5rem; right: 0.5rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2001;
+  }
+  /* full‐screen PDF */
+  #pdfViewer {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-top: 2.5rem; /* give a bit of room under the close button */
+  }
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GenAI Cyber-Infrastructure for Construction Education</title>
+        <!-- Link to your CSS file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='teams.css') }}" />
+    </head>
+    <body>
+
+<!-- Header / Navbar -->
+<header class="teams_header">
+  <div class="teams_navbar-container">
+
+    <!-- Left: NSF Logo + Award + Partner Logos -->
+    <div class="teams_logo-section">
+      <!-- NSF Logo -->
+      <img
+        src="{{ url_for('static', filename='images/nsf_logo.png') }}"
+        alt="NSF Logo"
+        class="teams_nsf-logo"
+      />
+      <span class="teams_award-text">
+        NSF<br>Award 2417804
+      </span>
+      <!-- Michigan Tech Logo -->
+      <img
+        src="{{ url_for('static', filename='images/mtu_color_logo.png') }}"
+        alt="Michigan Tech Logo"
+        class="teams_partner-logo"
+      />
+
+      <!-- Western Michigan University Logo -->
+      <img
+        src="{{ url_for('static', filename='images/WMU_primary-digital.png') }}"
+        alt="Western Michigan University Logo"
+        class="teams_partner-logo"
+      />
+    </div>
+
+    <!-- Right: Hamburger + Nav (no change) -->
+    <button class="teams_menu-toggle" aria-label="Toggle menu">
+      <span class="teams_hamburger-bar"></span>
+      <span class="teams_hamburger-bar"></span>
+      <span class="teams_hamburger-bar"></span>
+    </button>
+    <nav class="teams_nav">
+      <ul class="teams_nav-list">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a class="active" href="#">Team</a></li>
+        <li><a href="{{ url_for('curriculum_materials') }}">Curriculum Materials</a></li>
+        <li><a href="{{ url_for('ai_platform') }}">CyberTraining Platfrom</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+    <main class="teams_main-content">
+        <!-- Main Title -->
+        <h1 class="teams_title">
+          Meet our Team
+        </h1>
+
+        <p class="teams_intro-paragraph">
+          <span class="highlight-orange">WE</span> are an interdisciplinary team working to push the boundaries of construction cyberTraining, BIM CI, and cognitive science from Michigan Technological University and Western University. Led by the PI Bo Xiao, our team has three faculty members and six graduate students are trained through this project. An estimated advisory board has been established to provide constructive advice and ensure the success of this project.
+        </p>
+      
+        <!-- PI & Co-PIs Section -->
+        <section class="teams_section">
+          <h2 class="teams_section-title">PI & Co-PIs</h2>
+          <div class="teams_cards-container">
+            <!-- Card 1: Bo Xiao -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/bo-xiao.png') }}" 
+                alt="Bo Xiao" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">
+                <a href="https://bxiao2.wixsite.com/my-site/" target="_blank">Bo Xiao (PI)</a>
+              </h3>
+              <p class="teams_card-role">
+                Assistant Professor<br>
+                Michigan Tech University<br>
+                Email: boxiao@mtu.edu
+              </p>
+            </div>
+      
+            <!-- Card 2: Shane Mueller -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/shane-mueller.png') }}" 
+                alt="Shane Mueller" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">
+                <a href="http://shanetmueller.info" target="_blank"> Shane T. Mueller (Co-PI) </a>
+              </h3>
+              <p class="teams_card-role">
+                Professor<br>
+                Michigan Tech University<br>
+                Email: shamern@mtu.edu
+              </p>
+            </div>
+      
+            <!-- Card 3: Hexu Liu -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/liu_hexu.png') }}" 
+                alt="Hexu Liu" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">
+                <a href="https://sites.google.com/view/dsc-lab/home?authuser=0" target="_blank"> Hexu Liu (Co-PI) </a>
+              </h3>
+              <p class="teams_card-role">
+                Associate Professor<br>
+                Western Michigan University<br>
+                Email: hexu.liu@wmich.edu
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Contributing Members Section -->
+        <section class="teams_section">
+          <h2 class="teams_section-title">Contributing Members</h2>
+          <div class="teams_cards-container">
+            <!-- Card 1: Xiaoyu Hou -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/Xiaoyu-Hou.png') }}" 
+                alt="Xiaoyu Hou" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">Xiaoyu Hou</h3>
+              <p class="teams_card-role">
+                Ph.D. Student<br>
+                Michigan Tech University<br>
+                Email: xhou@mtu.edu
+              </p>
+            </div>
+            <!-- Card 2: Yifan Jeff Wang -->
+            <div class="teams_card">
+                <img 
+                    src="{{ url_for('static', filename='images/team/YifanWang.jpg') }}" 
+                    alt="Yifan Jeff Wang" 
+                    class="teams_card-image"
+                />
+                <h3 class="teams_card-name">
+                  <a href="" target="_blank">Yifan Jeff Wang</a>
+                </h3>                <p class="teams_card-role">
+                    Ph.D. Student<br>
+                    Michigan Techn University<br>
+                    Email: wyifan@mtu.edu
+                </p>
+            </div>
+      
+            <!-- Card 3: Katrina Carlson -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/Katrina-Carlson.png') }}" 
+                alt="Katrina Carlson" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">Katrina Carlson</h3>
+              <p class="teams_card-role">
+                Ph.D. Student<br>
+                Michigan Tech University<br>
+                Email: kcarlson@mtu.edu
+              </p>
+            </div>
+      
+            <!-- Card 4: Zaid Alwashah -->
+            <div class="teams_card">
+              <img 
+                src="{{ url_for('static', filename='images/team/Zaid-Alwashah.png') }}" 
+                alt="Zaid Alwashah" 
+                class="teams_card-image"
+              />
+              <h3 class="teams_card-name">Zaid Alwashah</h3>
+              <p class="teams_card-role">
+                Ph.D. Student<br>
+                Western Michigan University<br>
+                Email: zaid.alwashah@wmich.edu
+              </p>
+            </div>
+
+            <!-- Card 5: Aakash Walavalkar -->
+            <div class="teams_card">
+                <img 
+                    src="{{ url_for('static', filename='images/team/Aakash-main.jpg') }}" 
+                    alt="Aakash Walavalkar" 
+                    class="teams_card-image"
+                />
+                <h3 class="teams_card-name">
+                  <a href="https://www.triumphai.in/aakash-walavalkar" target="_blank">Aakash Walavalkar</a>
+                </h3>                <p class="teams_card-role">
+                    Graduate Student<br>
+                    Michigan Tech University<br>
+                    Email: awalaval@mtu.edu
+                </p>
+            </div>
+            <!-- Card 6: Puja Ammineni -->
+            <div class="teams_card">
+                <img 
+                    src="{{ url_for('static', filename='images/team/puja-ammineni.png') }}" 
+                    alt="Puja Ammineni" 
+                    class="teams_card-image"
+                />
+                <h3 class="teams_card-name">
+                  <a href="" target="_blank">Puja Ammineni</a>
+                </h3>                <p class="teams_card-role">
+                    Graduate Student<br>
+                    Michigan Tech University<br>
+                    Email: pamminen@mtu.edu
+                </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advisory Board Section -->
+          <section class="teams_section">
+            <h2 class="teams_section-title">Advisory Board</h2>
+            <div class="teams_advisory-grid">
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Zhenhua Zhu</strong></p>
+                <p>Assistant Professor</p>
+                <p>University of Wisconsin–Madison</p>
+              </div>
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Amos Darko</strong></p>
+                <p>Assistant Professor</p>
+                <p>University of Washington–Seattle</p>
+              </div>
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Ci-Jyun Polar Liang</strong></p>
+                <p>Assistant Professor</p>
+                <p>Stony Brook University</p>
+              </div>
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Aladdin Alwisy</strong></p>
+                <p>Assistant Professor</p>
+                <p>University of Florida</p>
+              </div>
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Wei Wu</strong></p>
+                <p>Professor</p>
+                <p>Fresno State University</p>
+              </div>
+              <div class="teams_advisory-card">
+                <p><strong>Dr. Abiola Akanmu</strong></p>
+                <p>Professor</p>
+                <p>Virginia Tech University</p>
+              </div>
+            </div>
+          </section>
+      </main>
+
+      <footer class="teams_footer">
+        <div class="teams_footer-container">
+          <!-- Footer Item 1: Contact Info (icon + text together) -->
+          <div class="footer-item footer-contact">
+            <img src="{{ url_for('static', filename='images/connect.png') }}" 
+                 alt="Connect Icon" 
+                 class="teams_connect-icon" />
+                 <div class="teams_contact-line">
+                  <span class="teams_contact-title">Contact Us:</span>
+                  <span class="teams_contact-email">boxiao@gmail.com</span>
+                </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<!-- Minimal JS -->
+<script>
+document.querySelector(".teams_menu-toggle").addEventListener("click", function() {
+  document.querySelector(".teams_nav-list").classList.toggle("teams_show-nav");
+});
+</script>
+</html>

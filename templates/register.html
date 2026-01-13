@@ -1,0 +1,68 @@
+<!-- templates/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+    <!-- Left Panel (Orange) -->
+    <div class="login-left-panel">
+        <!-- Logos Container -->
+        <div class="login-logos-container">
+            <div class="login-logo">
+                <img src="{{ url_for('static', filename='images/mtu_logo.png') }}" alt="MTU Logo">
+            </div>
+            <div class="login-logo">
+                <img src="{{ url_for('static', filename='images/wmu-logo.png') }}" alt="WMU Logo">
+            </div>
+            <div class="login-logo">
+                <img src="{{ url_for('static', filename='images/nsf_white.png') }}" alt="NSF Logo">
+            </div>
+        </div>
+
+        <!-- Main Bold Heading -->
+        <h1>
+          Cognitive and Generative AI CyberTraining Platfrom
+          <br>for Construction Education
+        </h1>
+
+        <!-- Optional Tagline -->
+        <p>Ready to solve your doubts!</p>
+    </div>
+
+
+    <!-- Right Panel (Forms) -->
+    <div class="login-right-panel">
+        <!-- Standard Registration Form -->
+        <div class="login-form-wrapper">
+            <!-- <h2>Register</h2>
+
+            {% if error %}
+                <p class="login-error-message">{{ error }}</p>
+            {% endif %}
+
+            <form action="{{ url_for('register') }}" method="POST">
+                <label for="username">Username</label>
+                <input type="text" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p class="login-register-link">
+                Already have an account? <a href="{{ url_for('login') }}">Login here</a>.
+            </p> -->
+
+            <p>This infrastructure is currently not publicly available.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

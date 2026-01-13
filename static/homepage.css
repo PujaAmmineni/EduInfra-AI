@@ -1,0 +1,470 @@
+/* =========================================
+   BASIC RESETS
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* =========================================
+     HEADER / NAVBAR
+     ========================================= */
+  .homepage_header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Constrain the navbar content to 1200px */
+  .homepage_navbar-container {
+    display: flex;
+    justify-content: space-between; /* pushes logo and nav/hamburger apart */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem;  
+    position: relative; /* needed for absolute-positioned dropdown on mobile */
+  }
+  
+  /* Logo + Award text */
+  .homepage_logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+  }
+  
+  .homepage_nsf-logo {
+    height: 70px;
+    width: auto;
+  }
+  
+  .homepage_award-text {
+    font-size: 1rem;
+  }
+  
+  /* =========================================
+     HAMBURGER MENU STYLES
+     ========================================= */
+  /* Hidden on desktop, visible on mobile */
+  .homepage_menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .homepage_hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* or #f57c00 if you prefer */
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+  
+  /* =========================================
+     NAVIGATION MENU
+     ========================================= */
+  /* Active Nav Link (desktop or mobile) */
+  .homepage_nav-list li a.active {
+    color: #f57c00; 
+    font-weight: bold;
+  }
+  
+  /* Desktop Nav */
+  .homepage_nav {
+    margin-right: 2rem;
+  }
+  
+  /* By default, horizontal nav on large screens */
+  .homepage_nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: max-height 0.3s ease; /* used for mobile dropdown animation */
+  }
+  
+  /* Nav links */
+  .homepage_nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .homepage_nav-list li a:hover {
+    color: #f57c00; /* orange highlight */
+  }
+  
+  
+  
+  /* =========================================
+     MAIN SECTION
+     ========================================= */
+  .homepage_main-section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Left Text Content */
+  .homepage_text-content {
+    flex: 1 1 500px;
+    margin-right: 2rem;
+  }
+  
+  .homepage_main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .homepage_highlight {
+    color: #f57c00; /* orange highlight */
+  }
+  
+  /* Project Info Box */
+  .homepage_project-info-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    padding: 1rem; 
+  }
+  
+  .homepage_project-info-header {
+    background-color: #f57c00;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .homepage_project-info-body {
+    color: #f57c00;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Button Centering Container */
+  .homepage_project-info-action {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* CTA Button */
+  .homepage_cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f57c00;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .homepage_cta-button:hover {
+    background-color: #333;
+  }
+  
+  /* Arrow icon styling */
+  .homepage_arrow-icon {
+    width: 16px;
+    height: auto;
+  }
+  
+  /* Right Image Container */
+  .homepage_image-container {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .homepage_building-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* =========================================
+     INTELLECTUAL MERIT & BROADER IMPACTS
+     ========================================= */
+  .homepage_info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+  
+  .homepage_info-col {
+    flex: 0 0 calc(50% - 1rem);
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .homepage_info-heading {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e06900;
+  }
+  
+  .homepage_info_text {
+    padding: 4px;
+    margin-bottom: 5px;
+  }
+  
+  /* Bullet list styling */
+  .homepage_bullet-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .homepage_bullet-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .homepage_bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    width: 8px;
+    height: 8px;
+    background-color: #f57c00;
+    border-radius: 50%;
+  }
+  
+  /* =========================================
+     TASK OVERVIEW SECTION
+     ========================================= */
+  .homepage_task-overview {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .homepage_task-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f57c00;
+  }
+  
+  .homepage_task-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* FOOTER
+   ========================================= */
+   .homepage_footer {
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .homepage_footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* center the single contact block now that it's the only item */
+    justify-content: center;
+  }  
+  
+/* CONTACT BLOCK */
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homepage_connect-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.homepage_contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homepage_contact-title {
+  font-size: 1rem;
+}
+
+.homepage_contact-email {
+  color: #f57c00;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Partner logos—smaller than NSF logo */
+.homepage_partner-logo {
+  height: 40px;      
+  width: auto;
+}
+
+.homepage_contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+  
+/* =========================================
+   MOBILE LAYOUT OVERRIDES
+   ========================================= */
+   @media (max-width: 768px) {
+
+    /* — HEADER — */
+    .homepage_navbar-container {
+      flex-wrap: nowrap;
+    }
+    .homepage_header {
+      padding: 0.8rem 0.8rem;        /* was 0.5rem, now 1rem top/bottom */
+    }
+    .homepage_nsf-logo {
+      height: 80px;
+    }
+    .homepage_award-text {
+      font-size: 0.9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .homepage_partner-logo {
+      display: none;
+    }
+    .homepage_menu-toggle {
+      display: flex;
+      margin-left: auto;
+    }
+  
+    /* — NAV DROPDOWN — */
+    .homepage_nav-list {
+      display: none;           /* hide by default */
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      width: 180px;
+      max-height: 0;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      padding: 0;
+      transition: max-height 0.3s ease;
+      z-index: 999;
+      flex-direction: column;
+    }
+    .homepage_nav-list.homepage_show-nav {
+      display: flex;           /* reveal when toggled */
+      max-height: 500px;
+      padding: 0.5rem 0;
+    }
+    .homepage_nav-list li {
+      margin: 0;
+      border-bottom: 1px solid #eee;
+    }
+    .homepage_nav-list li:last-child {
+      border-bottom: none;
+    }
+    .homepage_nav-list li a {
+      display: block;
+      padding: 0.75rem 1rem;
+    }
+    .homepage_nav-list li a:hover {
+      background-color: #f57c00;
+      color: #fff;
+    }
+  
+    /* — MAIN SECTION STACKING — */
+    .homepage_main-section {
+      flex-direction: column;
+      padding: 1rem;
+      gap: .5rem;
+    }
+    .homepage_text-content,
+    .homepage_image-container {
+      width: 100%;
+      margin: 0;
+    }
+    /* If you prefer the image first: */
+    /* .homepage_image-container { order: -1; } */
+  
+    /* shrink the heading */
+    .homepage_main-heading {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  
+    /* — PROJECT INFO & CTA — */
+    .homepage_project-info-box {
+      margin: 0 auto 1rem;
+    }
+    .homepage_cta-button {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    /* — INFO ROW STACKING — */
+    .homepage_info-row {
+      flex-direction: column;
+      padding: 0 1rem;
+      gap: 1rem;
+    }
+    .homepage_info-col {
+      width: 100%;
+    }
+  
+    /* — TASK OVERVIEW — */
+    .homepage_task-overview {
+      padding: 0 1rem;
+    }
+  
+    /* — FOOTER CENTERING — */
+    .homepage_footer-container {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .homepage_connect-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+ 

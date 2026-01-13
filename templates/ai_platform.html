@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="{{ url_for('static', filename='images/Curriculum-icon.png', _external=True) }}">  <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_ai_platforms">
+    <meta property="og:url" content="http://nsf-cyber-infrastructre-construction-education.com/curriculum_ai_platforms">
+    <meta property="og:type" content="website">
+    <title>GenAI Cyber-Infrastructure for Construction Education</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='ai_platform.css') }}" />
+</head>
+
+<body>
+<!-- Header / Navbar -->
+<header class="ai_platform_header">
+  <div class="ai_platform_navbar-container">
+
+    <!-- Left: NSF Logo + Award + Partner Logos -->
+    <div class="ai_platform_logo-section">
+      <!-- NSF Logo -->
+      <img
+        src="{{ url_for('static', filename='images/nsf_logo.png') }}"
+        alt="NSF Logo"
+        class="ai_platform_nsf-logo"
+      />
+      <span class="ai_platform_award-text">
+        NSF<br>Award 2417804
+      </span>
+      <!-- Michigan Tech Logo -->
+      <img
+        src="{{ url_for('static', filename='images/mtu_color_logo.png') }}"
+        alt="Michigan Tech Logo"
+        class="ai_platform_partner-logo"
+      />
+
+      <!-- Western Michigan University Logo -->
+      <img
+        src="{{ url_for('static', filename='images/WMU_primary-digital.png') }}"
+        alt="Western Michigan University Logo"
+        class="ai_platform_partner-logo"
+      />
+    </div>
+
+    <!-- Right: Hamburger + Nav (no change) -->
+    <button class="ai_platform_menu-toggle" aria-label="Toggle menu">
+      <span class="ai_platform_hamburger-bar"></span>
+      <span class="ai_platform_hamburger-bar"></span>
+      <span class="ai_platform_hamburger-bar"></span>
+    </button>
+      <!-- Nav -->
+            <!-- Nav -->
+            <nav class="ai_platform_nav">
+              <ul class="ai_platform_nav-list">
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('teams') }}">Team</a></li>
+              <li><a href="{{ url_for('curriculum_materials') }}">Curriculum Materials</a></li>
+              <li><a class="active" href="#">CyberTraining Platfrom</a></li>
+              </ul>
+          </nav>
+
+    </div>
+  </header>
+
+
+    <main class="ai_platform_main-content">
+        <section class="ai_platform_hero">
+          <div class="ai_platform_hero-container">
+            
+            <!-- Left: Title + Paragraph (70%) -->
+            <div class="ai_platform_hero-text">
+                <h1 class="ai_platform_hero-title">
+                    <span class="ai_platform_hero-title--highlight">Construction</span><br>
+                    CyberTraining Platform 
+                  </h1>
+              <p class="ai_platform_hero-paragraph">
+                 Our genAI CyberTraining platform transforms construction education by making learning more interactive and accessible. Our web-based platform allows real-time interaction between knowledge base and student, which is built on Microsoft Azure with leveraging OpenAI ChatGPT. In our platform, ChatGPT serves as Tutor, Questioner, and Evaluator.</br>
+             </p>
+              <div class="homepage_project-info-action">
+                <a href="{{ url_for('login') }}" class="homepage_cta-button">
+                  Try our Platform
+                  <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Arrow" class="homepage_arrow-icon" />
+                </a>
+              </div>
+            </div>
+            
+
+
+            <!-- Right: Illustration (30%) -->
+            <div class="ai_platform_hero-image">
+              <img 
+                src="{{ url_for('static', filename='images/ai_platform/robot-book.png') }}" 
+                alt="Illustration of robot holding a book" 
+              />
+            </div>
+      
+          </div>
+        </section>
+
+       
+        
+        <section class="ai_platform_features-section">
+            <div class="ai_platform_features-container">
+              
+              <!-- Feature #1
+              <div class="ai_platform_feature">
+                <h2 class="ai_platform_feature-title">PDF-Based QA Engine</h2>
+                <img
+                  src="{{ url_for('static', filename='images/ai_platform/pdf-based-qa-engine.png') }}"
+                  alt="pdf-based-qa-engine"
+                  class="ai_platform_feature-icon"
+                />
+                <p class="ai_platform_feature-text">
+                  Extracts precise answers from uploaded PDF files. Each answer is matched to the source
+                  content and includes a clickable reference to the original document page.
+                </p>
+              </div> -->
+          
+              <!-- Feature #2 -->
+              <div class="ai_platform_feature">
+                <h2 class="ai_platform_feature-title">Generative AI Response</h2>
+                <img
+                  src="{{ url_for('static', filename='images/ai_platform/Generative AI Response.png') }}"
+                  alt="Generative AI Response"
+                  class="ai_platform_feature-icon"
+                />
+                <p class="ai_platform_feature-text">
+                  If the uploaded material does not contain the answer, the system generates a general yet
+                  context-appropriate response using a large language model.
+                </p>
+              </div>
+
+              <!-- Feature #6 -->
+                <div class="ai_platform_feature">
+                  <h2 class="ai_platform_feature-title">Educational Enhancement</h2>
+                  <img
+                      src="{{ url_for('static', filename='images/ai_platform/Educational Enhancement.png') }}"
+                      alt="Educational Enhancement"
+                      class="ai_platform_feature-icon"
+                  />
+                  <p class="ai_platform_feature-text">
+                      Supports interactive learning in self-paced or instructor-led settings, with applications in university courses, workforce training, and technical workshops. </p>                    
+                </div>
+
+            <!-- Feature #3 -->
+            <div class="ai_platform_feature">
+                <h2 class="ai_platform_feature-title">Reference Linking</h2>
+                <img
+                    src="{{ url_for('static', filename='images/ai_platform/Reference Linking.png') }}"
+                    alt="Generative AI Response"
+                    class="ai_platform_feature-icon"
+                />
+                <p class="ai_platform_feature-text">
+                    Answers are automatically linked to the exact location within the uploaded PDF, allowing learners to verify information and explore further context.</p>
+                </div>
+
+            <!-- Feature #4 -->
+            <div class="ai_platform_feature">
+                <h2 class="ai_platform_feature-title">Azure Integration</h2>
+                <img
+                    src="{{ url_for('static', filename='images/ai_platform/Azure Integration.png') }}"
+                    alt="Azure Integration"
+                    class="ai_platform_feature-icon"
+                />
+                <p class="ai_platform_feature-text">
+                    The platform is built using Microsoft Azure OpenAI and Azure Cognitive Search, ensuring secure document processing and scalable AI service deployment. </p>                    
+                </div>
+
+            <!-- Feature #5
+            <div class="ai_platform_feature">
+                <h2 class="ai_platform_feature-title">Construction-Focused Design</h2>
+                <img
+                    src="{{ url_for('static', filename='images/ai_platform/Construction-Focused Design.png') }}"
+                    alt="Construction-Focused"
+                    class="ai_platform_feature-icon"
+                />
+                <p class="ai_platform_feature-text">
+                    The system is tailored for construction education use cases, including topics such as BIM, AR/VR, safety compliance, and computer vision in the AEC industry. </p>                    
+                </div> -->
+
+
+        
+            </div>
+          </section>
+
+          <!-- <section class="ai_architecture_simple">
+            <h2 class="ai_architecture_simple-title">
+              Generate AI-Based Web Application
+            </h2>
+            <div class="ai_architecture_simple-image">
+              <img
+                src="{{ url_for('static', filename='images/ai_platform/Generate AI-Based Web Application.png') }}"
+                alt="Architecture Diagram"
+              />
+            </div>
+          </section> -->
+
+
+      
+        <!-- …then your other page sections… -->
+      </main>
+      <footer class="ai_platform_footer">
+        <div class="ai_platform_footer-container">
+          <!-- Footer Item 1: Contact Info (icon + text together) -->
+          <div class="footer-item footer-contact">
+            <img src="{{ url_for('static', filename='images/connect.png') }}" 
+                 alt="Connect Icon" 
+                 class="ai_platform_connect-icon" />
+                 <div class="ai_platform_contact-line">
+                  <span class="ai_platform_contact-title">Contact Us:</span>
+                  <span class="ai_platform_contact-email">boxiao@gmail.com</span>
+                </div>
+          </div>
+        </div>
+      </footer>
+
+<!-- Minimal JS -->
+<script>
+    document.querySelector(".ai_platform_menu-toggle").addEventListener("click", function() {
+    document.querySelector(".ai_platform_nav-list").classList.toggle("ai_platform_show-nav");
+    });
+</script>
+</body>
+</html>

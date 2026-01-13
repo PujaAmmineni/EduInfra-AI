@@ -1,0 +1,415 @@
+/* =========================================
+   BASIC RESETS
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* =========================================
+     HEADER / NAVBAR
+     ========================================= */
+  .material_header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .material_navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    position: relative;
+  }
+  
+  /* Logo section now holds 4 items: NSF, award text, MTU, WMU */
+  .material_logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;              /* space between logos/text */
+  }
+
+  /* NSF logo stays big */
+  .material_nsf-logo {
+    height: 70px;
+    width: auto;
+  }
+
+  /* award text styling (unchanged) */
+  .material_award-text {
+    font-size: 1rem;
+  }
+  
+  /* =========================================
+     HAMBURGER MENU (MOBILE)
+     ========================================= */
+  .material_menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .material_hamburger-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+  
+  /* =========================================
+     NAVIGATION MENU
+     ========================================= */
+  .material_nav {
+    margin-right: 2rem;
+  }
+  
+  .material_nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: max-height 0.3s ease;
+  }
+  
+  .material_nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .material_nav-list li a:hover {
+    color: #f57c00;
+  }
+  
+  .material_nav-list li a.active {
+    color: #f57c00;
+    font-weight: bold;
+  }
+  /* =========================================
+   FOOTER
+   ========================================= */
+.material_footer {
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .material_footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* left, center, right items spread out */
+    /* Optional: you can add horizontal padding here if needed */
+  }
+  
+  /* FOOTER
+   ========================================= */
+   .material_footer {
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .material_footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* center the single contact block now that it's the only item */
+    justify-content: center;
+  }
+  
+  /* CONTACT BLOCK */
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .material_connect-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .material_contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .material_contact-title {
+    font-size: 1rem;
+  }
+  
+  .material_contact-email {
+    color: #f57c00;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+
+
+  /* Partner logos—smaller than NSF logo */
+  .material_partner-logo {
+    height: 40px;      
+    width: auto;
+  }
+
+  .material_contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Main Content Wrapper */
+  .material_main-content {
+    max-width: 1200px;       /* matches your header/footer container width */
+    margin: 2rem auto;       /* center horizontally and add vertical space */
+    padding: 0 2rem;
+    
+  }
+  
+    /* container to space it nicely */
+  .download-section {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  /* the button itself */
+  .download-button {
+    display: inline-block;
+    background-color: #FFA500;    /* orange */
+    color: #000;                   /* black text */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;         /* adjust for roundness */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .download-button:hover {
+    background-color: #e59400;     /* slightly darker on hover */
+  }
+  /* Intro Section Styles (existing) */
+  .material_intro-section {
+    text-align: center;      
+    margin-bottom: 2rem;     
+  }
+  .material_intro-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .material_highlight {
+    color: #f57c00;
+  }
+  .material_intro-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+  
+  /* Container for the entire "Week 1 – Introduction to BIM" section */
+.bim-intro-section {
+  padding: 2rem;
+  background-color: #fefefe; /* Adjust background color as needed */
+  font-family: Arial, sans-serif; /* Use your preferred font */
+}
+
+/* Flex container to display text on one side and image on the other */
+.bim-intro-container {
+  display: flex;
+  flex-wrap: wrap;          /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: center;      /* <-- This change centers items vertically */
+  gap: 2rem;                /* Spacing between text and image columns */
+}
+
+/* Left column: text area */
+.bim-intro-text {
+  flex: 1 1 300px;          /* Grow to fill space, minimum width ~300px */
+  max-width: 600px;         /* Set a max width if desired */
+  border: #333 4px solid;   /* Optional: border around the section */
+  padding: 1.5rem;          /* Padding inside the text area */
+  border-radius: 10px;
+}
+
+/* Header row with "Week 1," icon, and heading */
+.bim-intro-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.week-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f57c00  ;
+}
+
+.bim-icon {
+  width: 52px;   /* Adjust size of the icon */
+  height: 52px;
+}
+
+/* Title styling */
+.bim-intro-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Topics list styling */
+.bim-intro-topics {
+  list-style-type: disc;  /* or none if you prefer custom bullets */
+  padding-left: 1.5rem;   /* Indent list items */
+  margin: 0;
+}
+
+.bim-intro-topics li {
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Right column: main image */
+.bim-intro-image {
+  
+  width: 300px;        /* Adjust as necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* Centers the image inside its own box */
+}
+
+.bim-intro-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* ================================
+   MOBILE LAYOUT OVERRIDES
+   ================================ */
+   @media (max-width: 768px) {
+    /* Header: one row, shrink logos, show hamburger */
+    .material_navbar-container {
+      flex-wrap: nowrap;
+    }
+    .material_logo-section {
+      flex: 1 1 0;
+      min-width: 0;
+      gap: 0.5rem;
+    }
+    .material_header {
+      padding: 0.8rem 0.8rem;        /* was 0.5rem, now 1rem top/bottom */
+    }
+  
+    .material_nsf-logo {
+      height: 80px;
+    }
+    .material_award-text {
+      font-size: 0.9rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .material_partner-logo {
+      display: none;
+    }
+    .material_menu-toggle {
+      display: flex;
+      margin-left: auto;
+    }
+  
+    /* Nav: hide by default, show on toggle */
+    .material_nav-list {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      width: 200px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      padding: 0;
+      z-index: 999;
+      flex-direction: column;
+    }
+    .material_nav-list.material_show-nav {
+      display: flex;
+    }
+    .material_nav-list li {
+      border-bottom: 1px solid #eee;
+    }
+    .material_nav-list li:last-child {
+      border-bottom: none;
+    }
+    .material_nav-list li a {
+      display: block;
+      padding: 0.75rem 1rem;
+    }
+  
+    /* Main wrapper & intro text scaling */
+    .material_main-content {
+      padding: 0 1rem;
+    }
+    .material_intro-title {
+      font-size: 1.5rem !important;
+    }
+    .material_highlight {
+      font-size: 1.5rem !important;
+    }
+    .material_intro-paragraph {
+      font-size: 0.9rem !important;
+      line-height: 1.4;
+    }
+  
+    /* BIM sections: stack image → text */
+    .bim-intro-container {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem;
+    }
+    .bim-intro-image {
+      order: 0 !important;
+      width: 70% !important;
+      margin-bottom: 0.75rem;
+    }
+    .bim-intro-text {
+      order: 1 !important;
+      width: 100% !important;
+    }
+    .week-label {
+      font-size: 1.2rem !important;
+    }
+    .bim-intro-title {
+      font-size: 1.25rem !important;
+    }
+  
+    /* Footer: center */
+    .material_footer-container {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
